@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AboutMe</string>
+    <string name="me_text">Vlac Sauce</string>
+    <string name="yellow_start">Yello Start</string>
+    <string name="bio">
+        Bayonetta[d] is an action hack and slash video game developed by PlatinumGames and published by Sega. The game was originally released for Xbox 360 and PlayStation 3 in Japan in October 2009, and in North America and Europe in January 2010. The game was later released on the Wii U alongside its sequel, Bayonetta 2, releasing in September 2014 in Japan and worldwide the following month - the two games were later released worldwide on the Nintendo Switch in February 2018. An enhanced port for Windows was released in April 2017 with 4K support. A remastered version of Bayonetta as well as another PlatinumGames title, Vanquish, was released for PlayStation 4 and Xbox One on February 18, 2020, as part of a compilation to celebrate the 10th anniversary of the game.[4]
+        Bayonetta takes place in Vigrid, a fictional city in Europe. The game stars the eponymous character, a witch who is capable of shapeshifting and using various firearms. She possesses magical attacks and she can use her hair to summon demons to dispatch her foes. The game features a rating system, which gives players a grade based on their performance, and a combat system that is similar to the Devil May Cry series.
+    </string>
+    <string name="test_img">Test img</string>
+    <string name="whats_your_nickname">What is your nickname?</string>
+    <string name="done">Done</string>
+</resources>
