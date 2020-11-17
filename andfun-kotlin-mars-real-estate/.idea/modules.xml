@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/andfun-kotlin-mars-real-estate.iml" filepath="$PROJECT_DIR$/.idea/modules/andfun-kotlin-mars-real-estate.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/andfun-kotlin-mars-real-estate.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/andfun-kotlin-mars-real-estate.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-andfun-kotlin-mars-real-estate.iml" filepath="$PROJECT_DIR$/.idea/modules/android-andfun-kotlin-mars-real-estate.iml" group="andfun-kotlin-mars-real-estate" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="andfun-kotlin-mars-real-estate/app" />
     </modules>
   </component>
 </project>

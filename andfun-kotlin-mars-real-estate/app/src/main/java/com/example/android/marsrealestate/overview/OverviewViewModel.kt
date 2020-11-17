@@ -21,10 +21,10 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.android.marsrealestate.network.MarsApi
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import kotlinx.coroutines.launch
+import java.lang.Exception
 
 /**
  * The [ViewModel] that is attached to the [OverviewFragment].
@@ -49,20 +49,13 @@ class OverviewViewModel : ViewModel() {
      * Sets the value of the status LiveData to the Mars API status.
      */
     private fun getMarsRealEstateProperties() {
-        MarsApi.retrofitService.getProperties().enqueue(object : Callback<String> {
-            override fun onFailure(call: Call<String>, t: Throwable) {
-                t.message?.let {
-                    Log.i("ERROR", it)
-                }
-                _response.value = "Failure" + t.message
+        viewModelScope.launch {
+            try {
+                var listResult = MarsApi.retrofitService.getProperties()
+                _response.value = "Success: ${listResult.size} MarsProperties"
+            }catch (e: Exception) {
+                _response.value = "Failure" + e.message
             }
-
-            override fun onResponse(call: Call<String>, response: Response<String>) {
-                Log.i("RESPONSE_CODE", response.code().toString())
-                Log.i("RESPONSE_RAW", response.raw().toString())
-                _response.value = response.body().toString()
-            }
-        })
+        }
     }
-
 }
