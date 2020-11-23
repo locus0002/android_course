@@ -15,20 +15,24 @@
  *
  */
 
-package com.example.android.marsrealestate.network
+package com.example.android.devbyteviewer.ui
 
-import android.os.Parcelable
-import com.squareup.moshi.Json
-import kotlinx.android.parcel.Parcelize
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.android.devbyteviewer.R
 
-@Parcelize
-data class MarsProperty(
-        val id: String,
-        @Json(name = "img_src")
-        val imgSrcUrl: String,
-        val type: String,
-        val price: Double
-): Parcelable {
-        val isRental
-                get() = type == "rent"
+/**
+ * This is a single activity application that uses the Navigation library. Content is displayed
+ * by Fragments.
+ */
+class DevByteActivity : AppCompatActivity() {
+
+    /**
+     * Called when the activity is starting.  This is where most initialization
+     * should go
+     */
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_dev_byte_viewer)
+    }
 }

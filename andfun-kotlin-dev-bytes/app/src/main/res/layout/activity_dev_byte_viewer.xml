@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--
   ~ Copyright 2018, The Android Open Source Project
   ~
@@ -17,21 +16,19 @@
   ~
   -->
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-    <data>
-        <variable
-            name="property"
-            type="com.example.android.marsrealestate.network.MarsProperty" />
-    </data>
-    <ImageView
-        android:id="@+id/mars_image"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DevByteActivity">
+
+    <fragment
         android:layout_width="match_parent"
-        android:layout_height="170dp"
-        android:scaleType="centerCrop"
-        android:adjustViewBounds="true"
-        android:padding="2dp"
-        app:imageURL="@{property.imgSrcUrl}"
-        tools:src="@tools:sample/backgrounds/scenic"/>
-</layout>
+        android:layout_height="match_parent"
+        android:id="@+id/my_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/nav_graph"
+        app:defaultNavHost="true" />
+
+</FrameLayout>

@@ -15,20 +15,25 @@
  *
  */
 
-package com.example.android.marsrealestate.network
+package com.example.android.devbyteviewer.util
 
-import android.os.Parcelable
-import com.squareup.moshi.Json
-import kotlinx.android.parcel.Parcelize
+import android.view.View
+import android.widget.ImageView
+import androidx.databinding.BindingAdapter
+import com.bumptech.glide.Glide
 
-@Parcelize
-data class MarsProperty(
-        val id: String,
-        @Json(name = "img_src")
-        val imgSrcUrl: String,
-        val type: String,
-        val price: Double
-): Parcelable {
-        val isRental
-                get() = type == "rent"
+/**
+ * Binding adapter used to hide the spinner once data is available
+ */
+@BindingAdapter("goneIfNotNull")
+fun goneIfNotNull(view: View, it: Any?) {
+    view.visibility = if (it != null) View.GONE else View.VISIBLE
+}
+
+/**
+ * Binding adapter used to display images from URL using Glide
+ */
+@BindingAdapter("imageUrl")
+fun setImageUrl(imageView: ImageView, url: String) {
+    Glide.with(imageView.context).load(url).into(imageView)
 }
